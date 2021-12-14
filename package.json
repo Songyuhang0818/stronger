@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "开户前端文档",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "cache-loader": "^4.1.0",
+    "vuepress": "^1.5.2",
+    "vuepress-theme-reco": "^1.4.7"
+  }
+}
