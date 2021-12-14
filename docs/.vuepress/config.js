@@ -1,6 +1,6 @@
 const { nav, sidebar } = require("./utils/transdir2pages");
 module.exports = {
-  title: "前端成长之路",
+  title: "宋雨航前端成长之路",
   theme: "reco",
   description: "记录前端的点点滴滴",
   markdown: {
