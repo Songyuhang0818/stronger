@@ -29,5 +29,9 @@ tags:
 
 和数组相比，链表的优势在于：添加或者删除元素不需要移动其他元素,劣势在与链表相对于数组结构更复杂，需要一个指向下一个元素的指针，在访问链表中的某个元素也需要从头迭代，而不是像数组一样直接访问
 
-- [剑指 Offer06. 从尾到头打印链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)
+- [剑指 Offer06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
+
   - [题解](./S003_剑指offer06从尾到头输出链表.html)
+
+- [剑指 Offer24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)
+  - [题解](./S004_剑指offer24反转链表.html)

@@ -3,7 +3,7 @@ title: 剑指Offer06. 从尾到头打印链表
 author: songyuhang
 date: 2021-12-15
 tags:
-  - 栈
+  - 链表
   - 算法
 ---
 
