@@ -84,3 +84,43 @@ console.log(fn.myApply(obj, ["SYH", 25]));
 
 console.log(fn.apply(obj, ["SYH", 25]));
 ```
+
+## 手写实现 bind
+
+- 可以修改 this 指向
+- bind 返回一个绑定 this 的新函数
+- 支持函数柯里化
+- 新函数的 this 无法再被修改，使用 call、apply 也不行
+
+可以使用 call、apply
+
+- 因为 bind 的使用方法是 某函数.bind(某对象，...剩余参数)
+- 所以需要在 Function.prototype 上进行编程
+- 将传递的参数中的某对象和剩余参数使用 apply 的方式在一个回调函数中执行即可
+- 要在第一层获取到被绑定函数的 this，因为要拿到那个函数用 apply
+
+```js
+Function.prototype.my_bind = function() {
+  var self = this, // 保存原函数
+    context = Array.prototype.shift.call(arguments), // 保存需要绑定的this上下文
+    // 上一行等价于 context = [].shift.call(arguments);
+    args = Array.prototype.slice.call(arguments); // 剩余的参数转为数组
+  return function() {
+    // 返回一个新函数
+    self.apply(
+      context,
+      Array.prototype.concat.call(args, Array.prototype.slice.call(arguments))
+    );
+  };
+};
+
+function a(m, n, o) {
+  console.log({ m, n, o });
+  console.log(this.name + " " + m + " " + n + " " + o);
+}
+var b = {
+  name: "song",
+};
+
+a.my_bind(b, 4, 5, 6)();
+```
