@@ -1,18 +1,25 @@
-// Function.prototype.a = () => {
-//   console.log(1);
-// };
-// Object.prototype.b = () => {
-//   console.log(2);
-// };
-// function A() {}
-// const a = new A();
-// a.a();
-// a.b();
+// const a = [1, 3, 5, 7, 9];
 
-function Person() {}
-Person.prototype.name = "songyuhang";
+// const b = [2, 3, 6, 7, 100, 1000];
 
-const person1 = new Person();
-const person2 = new Person();
-console.log(person1 === Person.prototype);
-console.log(person2.name);
+// function checkArray(a, b) {
+//   if (!Array.isArray(a) || !Array.isArray(b)) return;
+//   const arr = [...a, ...b].sort();
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === arr[i + 1]) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   result = [...new Set(result)];
+//   console.log(result);
+// }
+// checkArray(a, b);
+
+console.log(a);
+
+function b() {
+  var a = 1;
+}
+
+b();
